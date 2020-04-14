@@ -1,5 +1,8 @@
 header {
     padding: .5rem 0;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: larger;
 }
 
 footer {
