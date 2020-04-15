@@ -5,6 +5,10 @@ header {
     font-size: larger;
 }
 
+main {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 footer {
     padding-top: 1.5rem;
     font-size: 80%;
