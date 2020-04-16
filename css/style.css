@@ -6,6 +6,12 @@ main {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+.main-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 3rem;
+}
+
 .logo {
     width: 25px;
     margin-right: 0.5em;
@@ -39,11 +45,6 @@ footer {
     height: 1.5rem;
     width: 1.5rem;
     padding: .5em;
-}
-.button {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    padding: 5px 10px;
 }
 
 .overlay {
@@ -113,10 +114,6 @@ footer {
     margin: 0;
 }
 
-table {
-    width: 100%;
-    max-width: 50rem;
-}
 table tr:nth-child(even) th {
     color: #ccc;
     font-weight: normal;
@@ -133,6 +130,7 @@ table th {
 table tr td {
     background-color: beige;
     text-align: center;
+    width: 100%;
 }
 
 footer {
