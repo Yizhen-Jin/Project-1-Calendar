@@ -1,19 +1,51 @@
-header {
-    padding: .5rem 0;
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+main {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 3rem;
+}
+
+.logo {
+    width: 25px;
+    margin-right: 0.5em;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.5em;
+}
+
+.nav-link {
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.SiteName {
+    font-size: xx-large;
+    align-items: center;
+    padding: 0.5em;
 }
 
 footer {
     padding-top: 1.5rem;
     font-size: 80%;
+    text-align: center;
 }
-
-.button {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    padding: 5px 10px;
-    border: 1px solid #aaa;
-    background-color: #eee;
-    color: #666;
+.button img {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: .5em;
 }
 
 .overlay {
@@ -83,10 +115,6 @@ footer {
     margin: 0;
 }
 
-table {
-    width: 100%;
-    max-width: 50rem;
-}
 table tr:nth-child(even) th {
     color: #ccc;
     font-weight: normal;
@@ -103,4 +131,32 @@ table th {
 table tr td {
     background-color: beige;
     text-align: center;
+    width: 100%;
+}
+
+.column {
+    float: left;
+    padding-bottom: 20px;
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 80%;
+}
+
+.developer_info {
+    font-weight: bold;
+}
+
+.profile {
+    max-width: 120px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
