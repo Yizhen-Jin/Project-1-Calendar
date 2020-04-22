@@ -3,6 +3,42 @@ body {
     flex-direction: column;
     display: flex;
     padding: .5rem;
+    line-height: 1.5;
+}
+
+main {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 3rem;
+}
+
+.logo {
+    width: 25px;
+    margin-right: 0.5em;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.5em;
+}
+
+.nav-link {
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.SiteName {
+    font-size: xx-large;
+    align-items: center;
+    padding: 0.5em;
 }
 
 main {
@@ -44,6 +80,7 @@ main {
 .inputgroup .interact{
     display: inline-block;
     align-items: center;
+    justify-content: space-between;
 }
 
 .active .dot {
@@ -56,8 +93,8 @@ main {
 footer {
     padding-top: 1.5rem;
     font-size: 80%;
+    text-align: center;
 }
-
 .button img {
     height: 1.5rem;
     width: 1.5rem;
@@ -152,4 +189,50 @@ table tr td {
 
 footer {
     text-align: center;
+}
+.column {
+    float: left;
+    padding-bottom: 20px;
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 80%;
+}
+
+.developer_info {
+    font-weight: bold;
+}
+
+.profile {
+    max-width: 120px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.list-content .tasks .important .item::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    margin-right: 10px;
+    background-color: rgba(252, 162, 89, 0.966);
+}
+
+.list-content .tasks .unimportant-nonurgent .item::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;    
+    margin-right: 10px;
+    background-color: rgba(80, 198, 253, 0.966);
 }

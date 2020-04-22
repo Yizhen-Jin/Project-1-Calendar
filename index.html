@@ -10,14 +10,14 @@
 <body>
     <nav>
         <nav class="navbar">
-            <a class="nav-link SiteName" href="/">
+            <a class="nav-link SiteName" href="index.html">
                 <img src="img/logo.png" class="logo">
                 What Next
             </a>
             <div>
                 <ul>
                     <a class="nav-link" href="index.html">Home</a>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="about.html">About Us</a>
                 </ul>
             </div>
         </nav>
@@ -51,6 +51,16 @@
                             <div class="deadline">
                                 <label for="deadline">Select a time to finish</label>
                                 <input type="time" id="deadline" name="deadline">
+                            </div>
+                            <div>
+                                <label for="priority">Priority level:</label>
+                                <select name="priority" id="priority">
+                                    <option value="N/A">-----</option>
+                                    <option value="importantUrgent">Important and Urgent</option>
+                                    <option value="Important">Important</option>
+                                    <option value="unimportantUrgent">Urgent but not important</option>
+                                    <option value="unimportant-nonurgent">Not Urgent and Not importnat</option>
+                                </select>
                             </div>
                             <input type="submit" value="Submit" onclick="getData()">
                         </form>
@@ -142,7 +152,7 @@
                         </tr>
                         <tr>
                             <th>15:30</th>
-                            <td id="demo15:30"></td>
+                            <td id="demo15:30"> Doctor appointment</td>
                         </tr>
                         <tr>
                             <th>16:00</th>
@@ -197,16 +207,16 @@
                         <h2><script> document.write(new Date().toDateString());</script></h2>
                     </div>
                     <div class="list-content">
-                        <div class="active">
-                            <ul class="tasks" >
-                                <span class="dot moderate"></span>
-                                <li class="item1">Go to the Gym</li>                                
-                                <span class="dot important"></span>
-                                <li class="item2">Project 3 deadline</li>
-                                <span class="dot important"></span>
-                                <li class="item3">Call Maureen</li>
+                            <ul class="tasks" style="list-style-type: none;">
+                                <div class="important">
+                                    <li class="item">Go to the Gym</li>                                
+                                    <li class="item">Project 3 deadline</li>
+                                </div>
+                                <div class="unimportant-nonurgent">
+                                    <li class="item">Call Maureen</li>
+                                    <li class="item">Grocery shopping</li>
+                                </div>
                             </ul>
-                    </div>
                     </div>
                 </div>
             </section>
