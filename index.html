@@ -25,8 +25,9 @@
 
     <main>
         <section class="inputgroup">
-            <div id="wrapper">
-                <p><a class="button" href="#popup1"> <img src="img/more.png" alt="Add task"></a></p>
+            <div class="container">
+            <div class="interact">
+               <a class="button" href="#popup1"> <img src="img/more.png" alt="Add task"></a>
             </div>
 
             <div id="popup1" class="overlay">
@@ -51,23 +52,26 @@
                                 <label for="deadline">Select a time to finish</label>
                                 <input type="time" id="deadline" name="deadline">
                             </div>
+                            <div>
+                                <label for="priority">Priority level:</label>
+                                <select name="priority" id="priority">
+                                    <option value="N/A">-----</option>
+                                    <option value="importantUrgent">Important and Urgent</option>
+                                    <option value="Important">Important</option>
+                                    <option value="unimportantUrgent">Urgent but not important</option>
+                                    <option value="unimportant-nonurgent">Not Urgent and Not importnat</option>
+                                </select>
+                            </div>
                             <input type="submit" value="Submit" onclick="getData()">
                         </form>
-                        <script>
-                            function getData() {
-                                var timeOutput = document.getElementById('deadline').value;
-                                document.getElementById('demotime').innerHTML = timeOutput;
-                                
-                                var tnOutput = document.getElementById('taskname').value;
-                                document.getElementById('demo' + timeOutput).innerHTML = tnOutput;
-                            }
-                        </script>
-
-                        <p id='demotime'></p>
-                        <p id='demo08:00'></p>
                     </div>
                 </div>
             </div>
+
+            <div class="interact">
+                <a class="button"> <img src="img/next.png" alt="Next day"></a>
+            </div>
+        </div>
         </section>
         <section class="main-content">
             <section class="outputgroup">
@@ -75,8 +79,72 @@
                 <table>
                     <body>
                         <tr>
-                            <th>08:00</th>
+                            <th>00:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>00:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>01:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>01:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>02:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>02:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>03:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>03:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>04:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>04:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>05:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>05:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>06:00</th>
                             <td id='demo08:00'></td>
+                        </tr>
+                        <tr>
+                            <th>06:30</th>
+                            <td id='demo08:00'></td>
+                        </tr>
+                        <tr>
+                            <th>07:00</th>
+                            <td id='demo08:00'></td>
+                        </tr>
+                        <tr>
+                            <th>07:30</th>
+                            <td id='demo08:00'></td>
+                        </tr>
+                        <tr>
+                            <th>08:00</th>
+                            <td id='demo08:00'>INFO 340 Group meeting</td>
                         </tr>
                         <tr>
                             <th>08:30</th>
@@ -136,7 +204,7 @@
                         </tr>
                         <tr>
                             <th>15:30</th>
-                            <td id="demo15:30"></td>
+                            <td id="demo15:30">Doctor appointment</td>
                         </tr>
                         <tr>
                             <th>16:00</th>
@@ -182,22 +250,45 @@
                             <th>21:00</th>
                             <td id="demo21:00"></td>
                         </tr>
+                        <tr>
+                            <th>21:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>22:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>22:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>23:00</th>
+                            <td id="demo21:00"></td>
+                        </tr>
+                        <tr>
+                            <th>23:30</th>
+                            <td id="demo21:00"></td>
+                        </tr>
                     </body>
                 </table>
             </section>
             <section class="todo-show">
-                <div class="To-do List">
+                <div class="Todo-List">
                     <div class="list-head">
-                        <h2><script> document.write(new Date().toDateString()); </script></h2>
+                        <h2><script> document.write(new Date().toDateString());</script></h2>
                     </div>
                     <div class="list-content">
-                        <div class="active">
-                            <ul class="tasks" >
-                                <li>Go to the Gym</li>
-                                <li>Project 3 deadline</li>
-                                <li>Call Maureen</li>
+                            <ul class="tasks" style="list-style-type: none;">
+                                <div class="important">
+                                    <li class="item">Go to the Gym</li>                                
+                                    <li class="item">Project 3 deadline</li>
+                                </div>
+                                <div class="unimportant-nonurgent">
+                                    <li class="item">Call Maureen</li>
+                                    <li class="item">Grocery shopping</li>
+                                </div>
                             </ul>
-                    </div>
                     </div>
                 </div>
             </section>
